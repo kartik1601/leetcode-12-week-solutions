@@ -1,6 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
-/* LitNode definition {Defined like LC}
+/* ListNode definition {Defined like LC}
     struct ListNode{
         int val;
         ListNode* next;
