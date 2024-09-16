@@ -88,11 +88,9 @@ public:
                 index -= 1;
             }
 
-            ListNodeD *temp = new ListNodeD(val);
-            temp->next = curr;
+            ListNodeD *temp = new ListNodeD(val,curr,prev);
             curr->prev = temp;
             prev->next = temp;
-            temp->prev = prev;
         } else {
             index = size - index;
             ListNodeD *curr = tail, *prev=NULL;
@@ -102,11 +100,9 @@ public:
                 index -= 1;
             }
 
-            ListNodeD *temp = new ListNodeD(val);
-            temp->next = prev;
+            ListNodeD *temp = new ListNodeD(val,prev,curr);
             prev->prev = temp;
             curr->next = temp;
-            temp->prev = curr;
         }
 
         size++;
